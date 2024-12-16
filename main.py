@@ -12,3 +12,9 @@ def generate_math_question(a, b):
 
 print(generate_math_question(1, 300))
 
+def check_answer(question, answer):
+    try:
+       answer = float(answer)
+       return answer == eval(question)
+    except ValueError:
+        return False
